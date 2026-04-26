@@ -49,10 +49,12 @@ const Home: NextPage = () => {
     try {
       await doTip({ functionName: "tip", args: [tipMessage], value: parseEther(tipAmount) });
       setTipAmount(""); setTipMessage("");
-    } catch (_) {}
+    } catch { /* ignore */ }
   };
 
-  const handleWithdraw = async () => { try { await doWithdraw({ functionName: "withdrawTips" }); } catch (_) {} };
+  const handleWithdraw = async () => {
+    try { await doWithdraw({ functionName: "withdrawTips" }); } catch { /* ignore */ }
+  };
 
   const isOwner = address && owner && address.toLowerCase() === (owner as string).toLowerCase();
   const [balance, count] = (stats as [bigint, bigint, bigint] | undefined) ?? [0n, 0n, 0n];
