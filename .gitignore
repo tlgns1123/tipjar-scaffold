@@ -1,0 +1,56 @@
+# dependencies
+node_modules
+
+# yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# env
+.env
+.env.local
+.env.*.local
+
+# hardhat
+artifacts
+cache
+typechain-types
+deployments/localhost
+deployments/hardhat
+
+# next.js
+packages/nextjs/.next/
+packages/nextjs/out/
+
+# eslint
+.eslintcache
+
+# build
+dist
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# misc
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode
+.idea
+
+# Claude / AI agent files
+CLAUDE.md
+AGENTS.md
+.claude/
+.agents/
+.cursor/
+.opencode/
+opencode.json
+funding.json
+CONTRIBUTING.md
